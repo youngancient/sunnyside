@@ -6,9 +6,10 @@
 html{
     scroll-behavior: smooth;
 }
+
 main{
     position: relative;
-    width: 100vw;
+    overflow-x: hidden;
 }
 .desktop{
     display: none;
@@ -18,18 +19,17 @@ main{
 }
 .hero{
     background-image: url(./images/mobile/image-header.jpg);
-    height: 90vh;
+    height: 100vh;
     background-repeat: no-repeat;
     background-position:center;
     background-size: cover;
     padding: 20px;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
 }
 .hero-main{
-    margin-top: 100px;
+    margin-top: 120px;
     font-family: 'Fraunces', serif;
     font-size: 30px;
     text-align: center;
@@ -57,8 +57,9 @@ header{
     display: flex;
     justify-content: center;
     z-index: 20;
-    /* padding: 10px; */
+    transition: 0.5s ease;
 }
+
 .headerbg{
     background: rgba(226, 223, 223, 0.5);
     border-radius: 5px;
@@ -108,7 +109,7 @@ header button, .mobile-a-links button{
 header button:hover{
     color: hsl(0, 0%, 100%);
     /* background: rgba(245, 243, 243, 0.5) */
-    background: rgb(21, 21, 218);
+    background: hsl(167, 42%, 56%);
 }
 .mobile-nav-links{
     margin-top: 60px;
@@ -133,8 +134,14 @@ header button:hover{
     font-size: 18px;
 }
 .sub-main{
-    display: flex;
     flex-direction: column;
+    transition: transform 0.8s ease-in;
+}
+.slide-in{
+    transform: translateX(-200%);
+}
+.show{
+    transform: translateX(0);
 }
 .sub-main img{
     width: 100%;
@@ -296,12 +303,12 @@ footer a:hover,footer i:hover{
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-@media screen and (max-width: 280px) {
-    
+    cursor: pointer;
 }
 @media screen and (min-width: 728px) {
-
+    .hero{
+        background-image: url(./images/desktop/image-header.jpg);
+    }
     header{
         display: flex;
         justify-content: space-between;
@@ -352,9 +359,6 @@ footer a:hover,footer i:hover{
     .two{
         grid-template-areas: "words image";
     } 
-    .desktop-nav-links button{
-        /* padding: 10; */
-    }
     .sub-main img{
         height: 400px;
     }
@@ -396,4 +400,18 @@ footer a:hover,footer i:hover{
         width: 100%;
     }
 
+}
+@media screen and (min-width: 820px) and (max-width: 912px) {
+    .hero{
+        background-image: url(./images/desktop/bg-header.jpg);
+        background-repeat: no-repeat;
+        height: 50vh;
+    }
+    .sub-main-words{
+        padding: 10px;
+    }
+    .sub-word{
+        line-height: 20px;
+        font-size: 20px;
+    }
 }

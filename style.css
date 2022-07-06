@@ -61,7 +61,7 @@ header{
 }
 
 .headerbg{
-    background: rgba(226, 223, 223, 0.5);
+    background: hsl(167, 42%, 56%);
     border-radius: 5px;
 }
 header img{
@@ -107,9 +107,7 @@ header button, .mobile-a-links button{
     height: 45px;
 }
 header button:hover{
-    color: hsl(0, 0%, 100%);
-    /* background: rgba(245, 243, 243, 0.5) */
-    background: hsl(167, 42%, 56%);
+    color:hsl(167, 42%, 56%);
 }
 .mobile-nav-links{
     margin-top: 60px;
@@ -406,7 +404,7 @@ footer a:hover,footer i:hover{
         background: url(./images/desktop/image-header.jpg);
         height: 50vh;
     }
-    .sub-main-words{
+    .sub-main-words{    
         padding: 10px;
     }
     .sub-word{

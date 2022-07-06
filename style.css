@@ -115,8 +115,7 @@ header button:hover{
     padding: 20px;
     background: hsl(0, 0%, 100%);
     display: none;
-    transition: 1s;
-    /* position: absolute; */
+    transition: transform 0.5s ease;
     position: fixed;
     z-index: 20;
 }
@@ -131,9 +130,12 @@ header button:hover{
     font-family: 'Barlow', sans-serif;
     font-size: 18px;
 }
+.mobile i{
+    transition: 0.5s ease;
+}
 .sub-main{
     flex-direction: column;
-    transition: transform 0.4s ease-in;
+    transition: transform 0.3s ease-in;
 }
 .slide-in{
     transform: translateX(-200%);

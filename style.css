@@ -135,7 +135,7 @@ header button:hover{
 }
 .sub-main{
     flex-direction: column;
-    transition: transform 0.8s ease-in;
+    transition: transform 0.4s ease-in;
 }
 .slide-in{
     transform: translateX(-200%);
@@ -400,6 +400,22 @@ footer a:hover,footer i:hover{
         width: 100%;
     }
 
+}
+@media screen and (min-width: 728px) and (max-width: 820px) {
+    .hero{
+        background: url(./images/desktop/image-header.jpg);
+        height: 50vh;
+    }
+    .sub-main-words{
+        padding: 10px;
+    }
+    .sub-word{
+        line-height: 20px;
+        font-size: 20px;
+    }
+    .sub-word p{
+        padding: 10px;
+    }
 }
 @media screen and (min-width: 820px) and (max-width: 912px) {
     .hero{
